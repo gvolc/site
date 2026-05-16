@@ -7,16 +7,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  <link rel="icon" href="https://github.com/gvolc/.github/blob/main/9632fa8ae473d71b23a5f610533da843.jpg" type="image/jpeg">
+  <link rel="icon" href="https://github.com/gvolc/.github/raw/main/9632fa8ae473d71b23a5f610533da843.jpg" type="image/jpeg">
 </head>
-<body>
+<body class="bg-[#0f1117] text-slate-200">
 
   <div class="max-w-6xl mx-auto px-6 py-10">
     <a href="../" class="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 mb-8">
       ← gvolc
     </a>
 
-    <img src="https://github.com/gvolc/.github/blob/main/9632fa8ae473d71b23a5f610533da843.jpg" 
+    <img src="https://github.com/gvolc/.github/raw/main/9632fa8ae473d71b23a5f610533da843.jpg" 
          alt="Banner" class="w-full rounded-2xl mb-10">
 
     <h1 class="text-5xl font-bold">kernelMesh</h1>
@@ -35,6 +35,31 @@
         <p class="text-teal-400 text-sm">Статус</p>
         <p class="font-medium mt-1 text-amber-400">В разработке</p>
       </div>
+    </div>
+
+    <!-- Навигация по разделам -->
+    <div class="mt-16 grid md:grid-cols-2 gap-6">
+      <a href="docs/" class="card rounded-2xl p-8 hover:border-teal-400 group">
+        <div class="flex items-center gap-4">
+          <i class="fas fa-book text-3xl text-teal-400"></i>
+          <div>
+            <h3 class="text-2xl font-semibold">Документация</h3>
+            <p class="text-slate-400 mt-1">Архитектура, API, инструкции</p>
+          </div>
+        </div>
+        <div class="mt-6 text-teal-400 text-sm group-hover:underline">Перейти →</div>
+      </a>
+
+      <a href="examples/" class="card rounded-2xl p-8 hover:border-teal-400 group">
+        <div class="flex items-center gap-4">
+          <i class="fas fa-code text-3xl text-teal-400"></i>
+          <div>
+            <h3 class="text-2xl font-semibold">Примеры</h3>
+            <p class="text-slate-400 mt-1">Готовые примеры кода</p>
+          </div>
+        </div>
+        <div class="mt-6 text-teal-400 text-sm group-hover:underline">Перейти →</div>
+      </a>
     </div>
 
     <div class="mt-12 text-center text-slate-400">
