@@ -7,71 +7,38 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link rel="icon" href="https://github.com/gvolc/.github/blob/main/9632fa8ae473d71b23a5f610533da843.jpg" type="image/jpeg">
 </head>
-<body class="bg-[#0a0a0f] text-slate-200">
+<body>
 
-  <div class="flex min-h-screen">
-    <!-- Sidebar -->
-    <div class="w-72 bg-[#0f0f17] border-r border-cyan-500/20 p-6 fixed h-full">
-      <a href="../" class="flex items-center gap-2 text-cyan-400 hover:text-cyan-300 mb-10">
-        ← gvolc
-      </a>
-      
-      <h1 class="text-4xl font-bold neon-text mb-10">kernelMesh</h1>
-      
-      <nav class="space-y-2">
-        <a href="#" class="flex items-center gap-3 px-4 py-3 bg-cyan-500/10 border border-cyan-400/30 rounded-2xl text-cyan-400">
-          <i class="fas fa-home"></i>
-          <span class="font-medium">Overview</span>
-        </a>
-        <a href="docs/" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-2xl transition">
-          <i class="fas fa-book"></i>
-          <span>Documentation</span>
-        </a>
-        <a href="examples/" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-2xl transition">
-          <i class="fas fa-code"></i>
-          <span>Examples</span>
-        </a>
-        <a href="https://github.com/gvolc/kernelMesh" target="_blank" class="flex items-center gap-3 px-4 py-3 hover:bg-white/5 rounded-2xl transition">
-          <i class="fab fa-github"></i>
-          <span>GitHub Repository</span>
-        </a>
-      </nav>
+  <div class="max-w-6xl mx-auto px-6 py-10">
+    <a href="../" class="inline-flex items-center gap-2 text-teal-400 hover:text-teal-300 mb-8">
+      ← gvolc
+    </a>
 
-      <div class="absolute bottom-8 left-6 right-6 text-xs text-slate-500">
-        <p>LICENSE: MPL-2.0</p>
-        <p class="mt-1">Author: Gleb Obitotsky</p>
+    <img src="https://github.com/gvolc/.github/blob/main/9632fa8ae473d71b23a5f610533da843.jpg" 
+         alt="Banner" class="w-full rounded-2xl mb-10">
+
+    <h1 class="text-5xl font-bold">kernelMesh</h1>
+    <p class="text-xl text-slate-400 mt-3">Исследование и создание ядра mesh-сети</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
+      <div class="card rounded-2xl p-6 text-center">
+        <p class="text-teal-400 text-sm">Лицензия</p>
+        <p class="font-medium mt-1">Mozilla Public License 2.0</p>
+      </div>
+      <div class="card rounded-2xl p-6 text-center">
+        <p class="text-teal-400 text-sm">Автор</p>
+        <p class="font-medium mt-1">Gleb Obitotsky (@oxxx1mif)</p>
+      </div>
+      <div class="card rounded-2xl p-6 text-center">
+        <p class="text-teal-400 text-sm">Статус</p>
+        <p class="font-medium mt-1 text-amber-400">В разработке</p>
       </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="flex-1 ml-72">
-      <div class="max-w-4xl mx-auto px-10 py-16">
-        <img src="https://github.com/gvolc/.github/blob/main/9632fa8ae473d71b23a5f610533da843.jpg" 
-             alt="Banner" class="w-full rounded-3xl border border-cyan-500/30 mb-12">
-        
-        <h2 class="text-6xl font-bold neon-text mb-6">kernelMesh</h2>
-        <p class="text-2xl text-cyan-300">Исследование и создание ядра mesh-сети</p>
-
-        <div class="mt-16 grid grid-cols-3 gap-6">
-          <div class="bg-[#111118] border border-cyan-500/20 p-6 rounded-3xl text-center">
-            <p class="text-cyan-400 text-sm">LICENSE</p>
-            <p class="font-medium">Mozilla Public License 2.0</p>
-          </div>
-          <div class="bg-[#111118] border border-cyan-500/20 p-6 rounded-3xl text-center">
-            <p class="text-cyan-400 text-sm">AUTHOR</p>
-            <p class="font-medium">Gleb Obitotsky (@oxxx1mif)</p>
-          </div>
-          <div class="bg-[#111118] border border-cyan-500/20 p-6 rounded-3xl text-center">
-            <p class="text-cyan-400 text-sm">STATUS</p>
-            <p class="font-medium text-yellow-400">EARLY DEVELOPMENT</p>
-          </div>
-        </div>
-
-        <div class="mt-20 text-center">
-          <p class="text-slate-400">Авторами могут стать все, кто хочет помочь в разработке</p>
-        </div>
-      </div>
+    <div class="mt-12 text-center text-slate-400">
+      Авторами могут стать все, кто хочет помочь в разработке
     </div>
   </div>
 
