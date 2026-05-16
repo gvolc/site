@@ -4,7 +4,6 @@ body {
     font-family: 'Inter', system-ui, sans-serif;
     background-color: #0f1117;
     color: #c8d0e0;
-    line-height: 1.6;
 }
 
 a { color: #5eead4; }
@@ -24,4 +23,8 @@ a:hover { color: #67e8f9; }
 .card:hover {
     border-color: #5eead4;
     transform: translateY(-4px);
+}
+
+.commit {
+    border-left: 3px solid #5eead4;
 }
