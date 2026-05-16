@@ -5,50 +5,64 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>gvolc — Cyber Backend Collective</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body class="bg-[#0a0a0f] text-slate-200 overflow-x-hidden">
 
   <!-- Hero -->
   <section class="hero min-h-screen flex items-center relative">
-    <div class="absolute inset-0 bg-[radial-gradient(at_center,#22d3ee_0%,transparent_70%)] opacity-10"></div>
-    <div class="max-w-6xl mx-auto px-6 text-center relative z-10">
+    <div class="absolute inset-0 bg-[radial-gradient(at_center,#22d3ee_0%,transparent_60%)] opacity-10"></div>
+    
+    <div class="max-w-6xl mx-auto px-6 text-center relative z-10 pt-10">
       <img src="https://github.com/gvolc/.github/blob/main/9632fa8ae473d71b23a5f610533da843.jpg" 
-           alt="gvolc Banner" class="w-full max-w-5xl mx-auto rounded-3xl border border-cyan-500/30 shadow-2xl shadow-cyan-500/20 mb-12">
-      
-      <h1 class="text-7xl font-bold tracking-tighter neon-text mb-4">gvolc</h1>
-      <p class="text-2xl text-cyan-400 font-medium">OPEN SOURCE BACKEND • MESH NETWORKS • FUTURE SYSTEMS</p>
+           alt="gvolc Banner" 
+           class="w-full max-w-5xl mx-auto rounded-3xl border border-cyan-500/30 shadow-2xl shadow-cyan-500/20 mb-12">
+
+      <h1 class="text-7xl md:text-8xl font-bold tracking-tighter neon-text mb-6">gvolc</h1>
+      <p class="text-2xl md:text-3xl text-cyan-300 font-medium tracking-wide">
+        OPEN SOURCE • BACKEND • MESH NETWORKS
+      </p>
     </div>
   </section>
 
-  <!-- Projects -->
-  <section class="py-20">
+  <!-- Projects Section -->
+  <section class="py-24">
     <div class="max-w-6xl mx-auto px-6">
-      <h2 class="text-4xl font-bold text-center mb-12 neon-text">PROJECTS</h2>
+      <h2 class="text-5xl font-bold text-center neon-text mb-16">PROJECTS</h2>
       
-      <div class="grid md:grid-cols-2 gap-8">
-        <!-- kernelMesh Card -->
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <!-- kernelMesh -->
         <a href="kernelMesh/" 
-           class="group bg-[#111118] border border-cyan-500/30 hover:border-cyan-400 rounded-3xl p-10 card neon-card">
+           class="group bg-[#111118] border border-cyan-500/30 hover:border-cyan-400 rounded-3xl p-10 card neon-card overflow-hidden">
           <div class="flex justify-between items-start">
             <div>
-              <h3 class="text-4xl font-bold mb-3 text-white">kernelMesh</h3>
-              <p class="text-slate-400 text-lg">Ядро распределённой mesh-сети</p>
+              <h3 class="text-4xl font-bold mb-3 neon-text">kernelMesh</h3>
+              <p class="text-slate-400 text-lg leading-relaxed">
+                Ядро распределённой<br>mesh-сети
+              </p>
             </div>
-            <i class="fas fa-network-wired text-5xl text-cyan-500/70 group-hover:text-cyan-400 transition"></i>
+            <i class="fas fa-network-wired text-6xl text-cyan-500/60 group-hover:text-cyan-400 transition-all duration-300"></i>
           </div>
-          <div class="mt-8 pt-6 border-t border-cyan-500/20 text-sm text-cyan-400 flex items-center gap-2">
-            <span class="w-2 h-2 bg-cyan-400 rounded-full animate-pulse"></span>
-            IN DEVELOPMENT
+          
+          <div class="mt-10 flex items-center gap-3 text-sm">
+            <span class="px-4 py-2 bg-cyan-500/10 text-cyan-400 rounded-full border border-cyan-500/30">IN DEVELOPMENT</span>
           </div>
         </a>
       </div>
     </div>
   </section>
 
-  <footer class="border-t border-cyan-500/10 py-12 text-center text-slate-500">
-    <p>Made with <span class="text-red-500">❤️</span> for the decentralized future</p>
+  <!-- Footer -->
+  <footer class="border-t border-cyan-500/10 py-12 text-center">
+    <div class="max-w-6xl mx-auto px-6">
+      <p class="text-slate-400">
+        Made with <span class="text-red-500">❤️</span> for high-quality open source backend
+      </p>
+      <p class="text-xs text-slate-500 mt-6">
+        All projects are open for contribution
+      </p>
+    </div>
   </footer>
 
 </body>
