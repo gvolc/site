@@ -11,19 +11,15 @@
 </head>
 <body class="bg-[#0f1117] text-slate-200">
 
-  <!-- Banner -->
-  <div class="pt-8 pb-12 header-bg">
-    <div class="max-w-6xl mx-auto px-6">
-      <img src="https://github.com/gvolc/.github/raw/main/9632fa8ae473d71b23a5f610533da843.jpg" 
-           alt="gvolc Banner" class="w-full rounded-2xl">
-    </div>
-  </div>
+  <div class="max-w-6xl mx-auto px-6 pt-8">
+    <!-- Banner (меньше и без сильного разделения) -->
+    <img src="https://github.com/gvolc/.github/raw/main/9632fa8ae473d71b23a5f610533da843.jpg" 
+         alt="gvolc Banner" class="w-full rounded-2xl mb-10">
 
-  <div class="max-w-6xl mx-auto px-6 py-16">
-    <h1 class="text-5xl font-bold text-center mb-3">gvolc</h1>
-    <p class="text-center text-xl text-slate-400">Open-source организация качественного backend-софта</p>
+    <h1 class="text-5xl font-bold text-center mb-2">gvolc</h1>
+    <p class="text-center text-xl text-slate-400 mb-16">Open-source организация качественного backend-софта</p>
 
-    <h2 class="text-3xl font-semibold mt-20 mb-10">Проекты</h2>
+    <h2 class="text-3xl font-semibold mb-10">Проекты</h2>
     
     <div class="grid md:grid-cols-2 gap-8">
       <a href="kernelMesh/" class="card rounded-2xl p-8 group">
@@ -33,7 +29,7 @@
       </a>
     </div>
 
-    <!-- Недавние изменения (динамические) -->
+    <!-- Недавние изменения -->
     <h2 class="text-3xl font-semibold mt-24 mb-10">Недавние изменения</h2>
     <div id="commits" class="space-y-4">
       <p class="text-slate-400 text-center py-8">Загрузка последних коммитов...</p>
@@ -42,7 +38,7 @@
 
   <script>
     async function loadRecentCommits() {
-      const repo = "gvolc/kernelMesh"; // ← поменяй, если нужно другой репозиторий
+      const repo = "gvolc/kernelMesh";
       const url = `https://api.github.com/repos/${repo}/commits?per_page=5`;
       
       try {
@@ -56,21 +52,19 @@
           });
           html += `
             <div class="card rounded-2xl p-5 commit">
-              <div class="flex justify-between">
-                <div class="font-medium">${c.commit.message.split('\n')[0]}</div>
-                <div class="text-xs text-slate-500">${date}</div>
+              <div class="flex justify-between items-start">
+                <div class="font-medium pr-4">${c.commit.message.split('\n')[0]}</div>
+                <div class="text-xs text-slate-500 whitespace-nowrap">${date}</div>
               </div>
               <div class="text-sm text-slate-400 mt-1">@${c.author ? c.author.login : 'unknown'}</div>
             </div>
           `;
         });
 
-        document.getElementById('commits').innerHTML = html;
+        document.getElementById('commits').innerHTML = html || '<p class="text-slate-400">Пока нет коммитов.</p>';
       } catch (e) {
         document.getElementById('commits').innerHTML = `
-          <p class="text-slate-400 text-center py-8">
-            Не удалось загрузить коммиты. Проверьте, что репозиторий публичный.
-          </p>`;
+          <p class="text-slate-400 text-center py-8">Не удалось загрузить последние изменения.</p>`;
       }
     }
 
