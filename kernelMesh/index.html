@@ -11,8 +11,8 @@
 </head>
 <body class="bg-[#0f1117] text-slate-200">
 
-    <!-- GitHub Icon - Top Left -->
-  <a href="https://github.com/gvolc/kernelMesh" target="_blank" 
+  <!-- GitHub Icon - Top Left -->
+  <a href="https://github.com/gvolc/kernelMesh" target="_blank"
      class="fixed top-6 left-6 z-50 text-slate-300 hover:text-white transition-colors">
     <i class="fab fa-github text-3xl"></i>
   </a>
@@ -22,12 +22,13 @@
       ← gvolc
     </a>
 
-    <img src="https://github.com/gvolc/.github/raw/main/9632fa8ae473d71b23a5f610533da843.jpg" 
+    <img src="https://github.com/gvolc/.github/raw/main/9632fa8ae473d71b23a5f610533da843.jpg"
          alt="Banner" class="w-full rounded-2xl mb-10">
 
     <h1 class="text-5xl font-bold">kernelMesh</h1>
     <p class="text-xl text-slate-400 mt-3">Исследование и создание ядра mesh-сети</p>
 
+    <!-- Инфо карточки -->
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-12">
       <div class="card rounded-2xl p-6 text-center">
         <p class="text-teal-400 text-sm">Лицензия</p>
@@ -43,6 +44,7 @@
       </div>
     </div>
 
+    <!-- Ссылки на разделы -->
     <div class="mt-16 grid md:grid-cols-2 gap-6">
       <a href="docs/" class="card rounded-2xl p-8 hover:border-teal-400 group">
         <i class="fas fa-book text-3xl text-teal-400 mb-4"></i>
@@ -56,9 +58,15 @@
       </a>
     </div>
 
+    <!-- Недавние изменения -->
     <h2 class="text-3xl font-semibold mt-24 mb-10">Недавние изменения</h2>
     <div id="commits" class="space-y-4">
       <p class="text-slate-400 text-center py-8">Загрузка последних коммитов...</p>
+    </div>
+
+    <!-- Footer текст -->
+    <div class="mt-16 text-center text-slate-400">
+      Авторами могут стать все, кто хочет помочь в разработке
     </div>
   </div>
 
@@ -66,15 +74,15 @@
     async function loadRecentCommits() {
       const repo = "gvolc/kernelMesh";
       const url = `https://api.github.com/repos/${repo}/commits?per_page=5`;
-      
+     
       try {
         const res = await fetch(url);
         const commits = await res.json();
-
+        
         let html = '';
         commits.forEach(c => {
-          const date = new Date(c.commit.author.date).toLocaleDateString('ru-RU', { 
-            year: 'numeric', month: 'short', day: 'numeric' 
+          const date = new Date(c.commit.author.date).toLocaleDateString('ru-RU', {
+            year: 'numeric', month: 'short', day: 'numeric'
           });
           html += `
             <div class="card rounded-2xl p-5 commit">
@@ -87,7 +95,7 @@
           `;
         });
 
-        document.getElementById('commits').innerHTML = html || '<p class="text-slate-400">Пока нет коммитов.</p>';
+        document.getElementById('commits').innerHTML = html || '<p class="text-slate-400 text-center py-8">Пока нет коммитов.</p>';
       } catch (e) {
         document.getElementById('commits').innerHTML = `
           <p class="text-slate-400 text-center py-8">Не удалось загрузить последние изменения.</p>`;
@@ -95,13 +103,7 @@
     }
 
     window.onload = loadRecentCommits;
-    
   </script>
 
-    <div class="mt-12 text-center text-slate-400">
-      Авторами могут стать все, кто хочет помочь в разработке
-    </div>
-  </div>
-  
 </body>
 </html>
